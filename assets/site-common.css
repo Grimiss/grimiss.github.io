@@ -1,0 +1,29 @@
+/* Shared navigation, focus states and responsive safeguards. */
+html{scroll-padding-top:100px}
+.site-header{position:sticky;top:0;z-index:50;width:100%;height:74px;min-height:74px;padding:13px 3%;display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:24px;background:rgba(5,7,18,.78);border:0;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.site-header .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.site-header .brand-icon{width:43px;height:43px;object-fit:contain}
+.site-header .brand-text{width:166px;height:auto}
+.site-header .nav{display:flex;align-items:center;gap:28px;font:13px/1.4 Arial,Helvetica,sans-serif;width:auto}
+.site-header .nav a{color:#d2cfdd;padding:9px 0;border-bottom:1px solid transparent}
+.site-header .nav a[aria-current="page"]{color:#bceaff;border-bottom-color:#8ac4dd}
+.site-header .nav a:hover{color:#fff}
+.site-menu{display:none;font:12px/1 Arial,Helvetica,sans-serif;letter-spacing:.08em;color:#eaf7ff;background:#07142180;border:1px solid #b6d9e84d;border-radius:5px;padding:12px;cursor:pointer}
+.site-header a:focus-visible,.site-menu:focus-visible{outline:2px solid #a4e0ff;outline-offset:5px}
+.home-page .site-header{position:absolute;top:0}
+.choose-tape{position:absolute;bottom:30px;left:4%;z-index:3;display:inline-flex;align-items:center;gap:24px;background:#041623b8;border:1px solid #93dfff70;padding:13px 20px;border-radius:5px;color:#d7f2ff;font-size:15px;box-shadow:0 4px 24px #0004}
+.choose-tape:hover{background:#12384de6}
+#choose-a-tape{scroll-margin-top:90px}
+.controls-grid .shelf-title{align-items:center}
+.shelf-scroll-hint{font:11px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.03em;color:#93c7df;max-width:1180px;margin:16px auto 0;text-align:center}
+.controls-grid .case-duration{font-size:13px;letter-spacing:-.065em}
+@media(max-width:800px){
+.site-header{height:74px;min-height:74px;padding:13px 5%;gap:12px;flex-wrap:nowrap}
+.site-header .brand-icon{width:36px;height:36px}.site-header .brand-text{width:145px}
+.site-menu{display:block}
+.site-header .nav{display:none;position:absolute;top:100%;left:0;right:0;width:100%;margin:0;padding:12px 5% 20px;flex-direction:column;align-items:stretch;gap:0;background:rgba(5,7,18,.97);box-shadow:0 14px 30px #0006}
+.site-header .nav.is-open{display:flex}.site-header .nav a{padding:13px 0;font-size:15px}
+.choose-tape{left:5%;bottom:22px;font-size:14px}
+}
+@media(max-width:380px){.site-header .brand-text{width:125px}.site-header .brand{gap:8px}.controls-grid .case-duration{font-size:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
