@@ -93,3 +93,17 @@ footer.shared-footer{border-top:0}
 #sound-factory:after{background:linear-gradient(to bottom,transparent 190px,#080d2040 270px,#080d20dc 360px)}
 #sound-factory .factory-inner{min-height:0;padding-top:350px;padding-bottom:45px}.factory-copy{width:100%;max-width:none}.factory-copy .lead{font-size:17px}
 }
+
+/* Give the studio equipment breathing room beside the copy. */
+@media(min-width:601px){
+#sound-factory:before{background-size:auto 86%;background-position:right bottom;-webkit-mask-image:none;mask-image:none}
+.factory-copy{width:40%;max-width:520px}
+}
+@media(min-width:601px) and (max-width:900px){
+#sound-factory:before{background-size:auto 78%;background-position:right bottom}
+.factory-copy{width:43%}
+}
+@media(max-width:600px){
+#sound-factory:before{background-size:auto 300px;background-position:right top;-webkit-mask-image:linear-gradient(to bottom,black,black 220px,transparent 310px);mask-image:linear-gradient(to bottom,black,black 220px,transparent 310px)}
+#sound-factory .factory-inner{padding-top:320px}
+}
