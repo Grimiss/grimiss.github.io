@@ -17,7 +17,7 @@ main{background:radial-gradient(ellipse at 95% 30%,#47245270,transparent 55%),ra
 
 /* About photographic atmosphere v2 */
 main{position:relative;isolation:isolate;overflow:hidden;background:#11101c}
-main:before{content:"";position:absolute;inset:-35px;z-index:-2;background-image:url("assets/cassette-texture.webp");background-size:cover;background-position:center 40%;filter:blur(24px) saturate(.65) brightness(.62);transform:scale(1.04);pointer-events:none}
+main:before{content:"";position:absolute;inset:-35px;z-index:-2;background-image:url("cassette-texture.webp");background-size:cover;background-position:center 40%;filter:blur(24px) saturate(.65) brightness(.62);transform:scale(1.04);pointer-events:none}
 main:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,11,23,.82),rgba(20,12,31,.62) 62%,rgba(14,12,27,.48)),linear-gradient(0deg,#0b0b15b0,transparent 32%);pointer-events:none}
 .story{max-width:1240px;padding-top:70px;padding-bottom:75px}
 h1,h2{color:#bfd6ef}
@@ -37,7 +37,7 @@ h1,h2{color:#bfd6ef}
 
 /* About v5: shoebox origin and reel footage lead the story. */
 body,main{background:#09130f}
-main:before{background-image:url("assets/cassette-texture.webp");background-position:center top;background-size:cover;filter:blur(52px) saturate(.8) brightness(.8)}
+main:before{background-image:url("cassette-texture.webp");background-position:center top;background-size:cover;filter:blur(52px) saturate(.8) brightness(.8)}
 main:after{background:linear-gradient(110deg,#07160ee0,#102c1c99 58%,#07150dbb),linear-gradient(0deg,#07120deb,transparent 65%)}
 h1,h2{color:#d2ebd5}.eyebrow{color:#b9d3b0}
 .opening,.copy,.connection{color:#edf2e9}
@@ -66,7 +66,7 @@ footer.shared-footer{border-top:0}
 
 
 /* About v6: photographic origin, followed by alternating text and film. */
-.about-origin{position:relative;isolation:isolate;min-height:700px;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:65px 6%;background:#081b10 url("assets/about-shoebox-wide.webp") center center/cover no-repeat}
+.about-origin{position:relative;isolation:isolate;min-height:700px;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:65px 6%;background:#081b10 url("about-shoebox-wide.webp") center center/cover no-repeat}
 .about-origin:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,transparent 35%,#07170a15 48%,#05150c66 100%),linear-gradient(0deg,#09170f,transparent 18%)}
 .origin-copy{grid-column:2;max-width:600px;padding:25px 0 25px 35px;color:#f0f2e9;text-shadow:0 1px 6px #0006}
 .origin-copy h1{font-size:clamp(40px,4.6vw,68px);margin-bottom:30px}
@@ -106,21 +106,21 @@ main#main{overflow:clip}
 
 /* Full-width atmosphere with an independently sized shoebox photograph. */
 .about-origin{background:#091b11;overflow:hidden}
-.about-origin:after{content:"";position:absolute;inset:-45px;z-index:-2;background:url("assets/about-shoebox-wide.webp") center/cover no-repeat;filter:blur(42px) brightness(.65);transform:scale(1.08);pointer-events:none}
-.about-origin:before{inset:0;z-index:-1;background-image:linear-gradient(90deg,transparent 28%,#091b1155 44%,#091b11e6 64%,#091b11f0 100%),linear-gradient(0deg,#091b11,transparent 22%),url("assets/about-shoebox-wide.webp");background-size:100% 100%,100% 100%,auto 88%;background-position:center,center,left -65px center;background-repeat:no-repeat;pointer-events:none}
+.about-origin:after{content:"";position:absolute;inset:-45px;z-index:-2;background:url("about-shoebox-wide.webp") center/cover no-repeat;filter:blur(42px) brightness(.65);transform:scale(1.08);pointer-events:none}
+.about-origin:before{inset:0;z-index:-1;background-image:linear-gradient(90deg,transparent 28%,#091b1155 44%,#091b11e6 64%,#091b11f0 100%),linear-gradient(0deg,#091b11,transparent 22%),url("about-shoebox-wide.webp");background-size:100% 100%,100% 100%,auto 88%;background-position:center,center,left -65px center;background-repeat:no-repeat;pointer-events:none}
 @media(min-width:601px){.about-origin{background-position:initial}}
 @media(max-width:900px) and (min-width:601px){.about-origin:before{background-size:100% 100%,100% 100%,auto 78%;background-position:center,center,left -80px center}}
-@media(max-width:600px){.about-origin{background:#091b11}.about-origin:before{background-image:linear-gradient(0deg,#091b11 0%,#091b11 45%,transparent 78%),url("assets/about-shoebox-wide.webp");background-size:100% 100%,auto 300px;background-position:center,left top}.origin-copy{padding-top:300px}}
+@media(max-width:600px){.about-origin{background:#091b11}.about-origin:before{background-image:linear-gradient(0deg,#091b11 0%,#091b11 45%,transparent 78%),url("about-shoebox-wide.webp");background-size:100% 100%,auto 300px;background-position:center,left top}.origin-copy{padding-top:300px}}
 
 
 
 /* One continuous hero image: no inset seams or bottom fade. */
-.about-origin{-webkit-mask-image:none;mask-image:none;background:#091b11 url("assets/about-shoebox-wide.webp") center center/cover no-repeat;border:0}
+.about-origin{-webkit-mask-image:none;mask-image:none;background:#091b11 url("about-shoebox-wide.webp") center center/cover no-repeat;border:0}
 .about-origin:after{display:none}
 .about-origin:before{inset:0;background:linear-gradient(90deg,transparent 36%,rgba(5,21,12,.12) 50%,rgba(5,21,12,.45) 100%);border:0}
 @media(min-width:601px){.about-origin{background-position:center center}.origin-copy{padding-left:40px}}
 @media(max-width:900px) and (min-width:601px){.about-origin{background-position:47% center}.about-origin:before{background:linear-gradient(90deg,transparent 30%,#05150c33 48%,#05150c88 100%)}}
-@media(max-width:600px){.about-origin{background:#091b11}.about-origin:before{background:url("assets/about-shoebox-wide.webp") left top/auto 340px no-repeat}.origin-copy{padding-top:340px;position:relative;z-index:1}}
+@media(max-width:600px){.about-origin{background:#091b11}.about-origin:before{background:url("about-shoebox-wide.webp") left top/auto 340px no-repeat}.origin-copy{padding-top:340px;position:relative;z-index:1}}
 
 
 

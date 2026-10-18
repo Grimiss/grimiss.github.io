@@ -21,7 +21,7 @@ h1{font-size:clamp(76px,7.6vw,108px);margin-bottom:23px}
 
 /* Homepage v3: a blurred continuation of the hero below the fold. */
 .ambient-sections{position:relative;isolation:isolate;overflow:hidden;background:#10152c}
-.ambient-wash{position:absolute;inset:-90px;z-index:-2;background-image:url("assets/shared-image-1.webp");background-size:cover;background-position:65% center;filter:blur(65px) saturate(.85);opacity:.65;pointer-events:none}
+.ambient-wash{position:absolute;inset:-90px;z-index:-2;background-image:url("shared-image-1.webp");background-size:cover;background-position:65% center;filter:blur(65px) saturate(.85);opacity:.65;pointer-events:none}
 .ambient-sections:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#080a13 0%,rgba(8,10,24,.48) 18%,rgba(10,13,31,.40) 62%,rgba(8,10,22,.77) 100%);pointer-events:none}
 .ambient-sections .lead,.ambient-sections .mood p{color:#ddddeb}
 .ambient-sections .eyebrow{color:#d2b0ec}

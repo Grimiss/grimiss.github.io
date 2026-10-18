@@ -17,7 +17,7 @@ main{background:radial-gradient(ellipse at 95% 30%,#47245270,transparent 55%),ra
 
 /* About photographic atmosphere v2 */
 main{position:relative;isolation:isolate;overflow:hidden;background:#11101c}
-main:before{content:"";position:absolute;inset:-35px;z-index:-2;background-image:url("assets/cassette-texture.webp");background-size:cover;background-position:center 40%;filter:blur(24px) saturate(.65) brightness(.62);transform:scale(1.04);pointer-events:none}
+main:before{content:"";position:absolute;inset:-35px;z-index:-2;background-image:url("cassette-texture.webp");background-size:cover;background-position:center 40%;filter:blur(24px) saturate(.65) brightness(.62);transform:scale(1.04);pointer-events:none}
 main:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,11,23,.82),rgba(20,12,31,.62) 62%,rgba(14,12,27,.48)),linear-gradient(0deg,#0b0b15b0,transparent 32%);pointer-events:none}
 .story{max-width:1240px;padding-top:70px;padding-bottom:75px}
 h1,h2{color:#bfd6ef}
@@ -37,7 +37,7 @@ h1,h2{color:#bfd6ef}
 
 /* About v5: shoebox origin and reel footage lead the story. */
 body,main{background:#09130f}
-main:before{background-image:url("assets/cassette-texture.webp");background-position:center top;background-size:cover;filter:blur(52px) saturate(.8) brightness(.8)}
+main:before{background-image:url("cassette-texture.webp");background-position:center top;background-size:cover;filter:blur(52px) saturate(.8) brightness(.8)}
 main:after{background:linear-gradient(110deg,#07160ee0,#102c1c99 58%,#07150dbb),linear-gradient(0deg,#07120deb,transparent 65%)}
 h1,h2{color:#d2ebd5}.eyebrow{color:#b9d3b0}
 .opening,.copy,.connection{color:#edf2e9}
