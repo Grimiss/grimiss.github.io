@@ -77,3 +77,19 @@ footer.shared-footer{border-top:0}
 
 
 .software-preview{padding:0;background:none;border:0;border-radius:0;box-shadow:none}.software-preview a{border:0;box-shadow:none}.software-preview figcaption{padding:0}
+/* Full-width studio backdrop, with clear space for the copy. */
+#listening>.text-link{margin-top:14px;margin-bottom:0}
+#listening .moods{margin-top:30px}
+#sound-factory{position:relative;isolation:isolate;overflow:hidden}
+#sound-factory:before{content:"";position:absolute;inset:0;z-index:-2;background:#080d20 url("factory-wide.webp") center right/cover no-repeat;-webkit-mask-image:linear-gradient(to bottom,transparent,black 13%);mask-image:linear-gradient(to bottom,transparent,black 13%)}
+#sound-factory:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,11,29,.88),rgba(7,11,29,.66) 34%,rgba(7,11,29,.12) 54%,transparent 72%);pointer-events:none}
+#sound-factory .factory-inner{display:flex;align-items:center;min-height:clamp(650px,46vw,850px);padding-top:65px;padding-bottom:55px}
+.factory-copy{width:43%;max-width:560px}
+.factory-copy .lead{font-size:18px;line-height:1.65}
+.factory-caption{font-size:10px;letter-spacing:.07em;line-height:1.7;color:#c7c6d7;margin-top:22px}
+@media(max-width:900px) and (min-width:601px){.factory-copy{width:47%}.factory-copy .lead{font-size:16px}#sound-factory .factory-inner{min-height:650px}#sound-factory:before{background-position:62% center}#sound-factory:after{background:linear-gradient(90deg,#080d20ed,#080d20c4 41%,#080d2020 65%,transparent)}}
+@media(max-width:600px){
+#sound-factory:before{background-size:auto 340px;background-position:right top;-webkit-mask-image:linear-gradient(to bottom,transparent,black 8%,black 230px,transparent 350px);mask-image:linear-gradient(to bottom,transparent,black 8%,black 230px,transparent 350px)}
+#sound-factory:after{background:linear-gradient(to bottom,transparent 190px,#080d2040 270px,#080d20dc 360px)}
+#sound-factory .factory-inner{min-height:0;padding-top:350px;padding-bottom:45px}.factory-copy{width:100%;max-width:none}.factory-copy .lead{font-size:17px}
+}
