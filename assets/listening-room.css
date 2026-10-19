@@ -180,3 +180,14 @@ footer.shared-footer{border-top:0}
 .controls-grid .youtube-link{margin-top:auto}
 }
 @media(max-width:700px){.controls-grid .shelf-panel{height:auto}.controls-grid .shelf{max-height:none}.controls-grid .player{height:auto}}
+
+/* Player browsing controls and readable cassette numbering. */
+.player-navigation{display:flex;justify-content:space-between;gap:16px;margin:12px 0 0;flex-shrink:0}
+.player-navigation button{display:grid;place-items:center;width:48px;height:36px;border:1px solid #75cefa66;border-radius:5px;background:#0a2b40;color:#bceaff;font:24px/1 Arial,sans-serif;cursor:pointer}
+.player-navigation button:hover{background:#12425c;border-color:#a1e6ff}
+.player-navigation button:focus-visible{outline:3px solid #bceaff;outline-offset:3px}
+.controls-grid .case{padding-left:12%;grid-template-columns:2ch minmax(0,1fr) auto}
+.controls-grid .case-index{font-family:"Courier New",Courier,monospace;font-size:15px;font-weight:700;line-height:1.1;letter-spacing:-.045em;color:#27212d;text-shadow:.3px .2px 0 #27212d55}
+@media(max-width:1000px) and (min-width:701px){.controls-grid .case-index{font-size:13px}}
+@media(max-width:700px){.controls-grid .case-index{font-size:14px}}
+@media(max-width:380px){.controls-grid .case-index{font-size:12px}}
