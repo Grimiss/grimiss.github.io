@@ -205,3 +205,8 @@ footer.shared-footer{border-top:0}
 .deck-digit{display:block;flex:1;height:17px;overflow:hidden;position:relative;box-shadow:inset 1px 0 #a5e6ed18}
 .deck-digit-strip,.deck-digit-strip>span{display:block;height:17px;line-height:17px}
 @media(prefers-reduced-motion:reduce){.deck-playing .cassette-hub{animation:none}}
+
+/* Heavier mechanical counter figures and a full two-row scrolling strip. */
+.deck-counter{font-weight:700!important;text-shadow:0 0 .35px currentColor}
+.deck-digit-strip{height:34px;will-change:transform}
+.deck-digit-strip>span{height:17px;line-height:17px;font-weight:700}
