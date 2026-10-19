@@ -116,3 +116,7 @@ main.process-immersive{position:relative;isolation:isolate;overflow:clip;backgro
 .process-video-fade{right:43%;background:linear-gradient(90deg,#200e17b3 0%,#200e1755 55%,transparent 100%)}
 @media(max-width:900px){.process-backdrop video#process-background-video{width:44%}.process-backdrop video.process-colour-bleed{right:44%}.process-video-fade{right:44%}}
 @media(max-width:600px){.process-backdrop video#process-background-video{width:75%;opacity:.32}.process-backdrop video.process-colour-bleed{right:75%;width:75%;opacity:.3}.process-video-fade{right:0;background:linear-gradient(90deg,#200e17cc,#34121e66)}}
+
+/* Softer red lighting, with a little more definition in the studio footage. */
+.process-backdrop video#process-background-video{filter:saturate(.72) brightness(.9) contrast(1.12)}
+.process-backdrop video.process-colour-bleed{filter:blur(48px) saturate(.65) brightness(.85) contrast(1.08)}
