@@ -214,3 +214,10 @@ footer.shared-footer{border-top:0}
 /* Clear the widest dark end panel used by the cassette artwork. */
 .controls-grid .case{padding-left:16%;column-gap:7px}
 .controls-grid .case-index{position:relative;z-index:1;white-space:nowrap;overflow:visible}
+
+/* Matched tape transport icons flank the YouTube link. */
+.controls-grid .player-navigation{display:grid;grid-template-columns:48px minmax(0,1fr) 48px;align-items:stretch;gap:10px;margin:0;flex-shrink:0}
+.controls-grid .player-navigation button{width:48px;height:44px;padding:0;display:grid;place-items:center}
+.player-navigation svg{display:block;width:24px;height:24px}
+.controls-grid .player-navigation .youtube-link{margin:0;min-width:0;min-height:44px;padding:8px;display:flex;align-items:center;justify-content:center}
+@media(min-width:701px){.controls-grid .player-navigation{margin-top:auto}}
