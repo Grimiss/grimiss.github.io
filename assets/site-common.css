@@ -27,3 +27,10 @@ html{scroll-padding-top:100px}
 }
 @media(max-width:380px){.site-header .brand-text{width:125px}.site-header .brand{gap:8px}.controls-grid .case-duration{font-size:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Footer text shares the 226px reel-and-wordmark footprint. */
+footer.shared-footer{--footer-brand-width:226px}
+footer.shared-footer .footer-brand{width:var(--footer-brand-width);max-width:100%;gap:12px}
+footer.shared-footer .footer-tagline,footer.shared-footer .footer-contact{width:var(--footer-brand-width);max-width:100%;margin:0 auto;box-sizing:border-box;text-align:center}
+footer.shared-footer .footer-tagline{font-size:12px;line-height:1.6;font-style:italic;letter-spacing:0}
+footer.shared-footer .footer-contact{font-size:9.5px;line-height:1.6;letter-spacing:0;overflow-wrap:anywhere}
