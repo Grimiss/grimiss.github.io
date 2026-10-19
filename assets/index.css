@@ -107,3 +107,10 @@ footer.shared-footer{border-top:0}
 #sound-factory:before{background-size:auto 300px;background-position:right top;-webkit-mask-image:linear-gradient(to bottom,black,black 220px,transparent 310px);mask-image:linear-gradient(to bottom,black,black 220px,transparent 310px)}
 #sound-factory .factory-inner{padding-top:320px}
 }
+
+/* Soft local navy backing keeps copy readable over studio detail. */
+.hero-content{isolation:isolate}
+.hero-content:before{content:"";position:absolute;z-index:-1;inset:75px -28px 25px -28px;background:rgba(5,10,27,.4);filter:blur(25px);border-radius:42px;pointer-events:none}
+.factory-copy{position:relative;isolation:isolate}
+.factory-copy:before{content:"";position:absolute;z-index:-1;inset:-28px -32px;background:rgba(5,10,27,.42);filter:blur(25px);border-radius:40px;pointer-events:none}
+@media(max-width:720px){.hero-content:before{inset:120px 2% 40px;background:rgba(5,10,27,.4);filter:blur(23px)}}
