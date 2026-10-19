@@ -197,3 +197,11 @@ footer.shared-footer{border-top:0}
 .cassette-hub-1{animation-duration:17s}
 @keyframes cassette-hub-turn{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.cassette-hub{animation:none}}
+
+/* Deck A follows actual YouTube playing/paused/buffering state. */
+.cassette-hub{animation-direction:reverse;animation-play-state:paused}
+.deck-playing .cassette-hub{animation-play-state:running}
+.deck-counter{display:flex;letter-spacing:0!important;overflow:hidden}
+.deck-digit{display:block;flex:1;height:17px;overflow:hidden;position:relative;box-shadow:inset 1px 0 #a5e6ed18}
+.deck-digit-strip,.deck-digit-strip>span{display:block;height:17px;line-height:17px}
+@media(prefers-reduced-motion:reduce){.deck-playing .cassette-hub{animation:none}}
