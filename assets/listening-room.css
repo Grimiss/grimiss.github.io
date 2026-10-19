@@ -191,3 +191,9 @@ footer.shared-footer{border-top:0}
 @media(max-width:1000px) and (min-width:701px){.controls-grid .case-index{font-size:13px}}
 @media(max-width:700px){.controls-grid .case-index{font-size:14px}}
 @media(max-width:380px){.controls-grid .case-index{font-size:12px}}
+
+/* Only deck A's two photographic cassette hubs rotate. */
+.cassette-hub{position:absolute;display:block;pointer-events:none;border-radius:50%;background-image:url("listening-wide.webp");background-repeat:no-repeat;animation:cassette-hub-turn 14s linear infinite;z-index:1}
+.cassette-hub-1{animation-duration:17s}
+@keyframes cassette-hub-turn{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.cassette-hub{animation:none}}
