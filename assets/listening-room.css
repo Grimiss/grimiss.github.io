@@ -210,3 +210,7 @@ footer.shared-footer{border-top:0}
 .deck-counter{font-weight:700!important;text-shadow:0 0 .35px currentColor}
 .deck-digit-strip{height:34px;will-change:transform}
 .deck-digit-strip>span{height:17px;line-height:17px;font-weight:700}
+
+/* Clear the widest dark end panel used by the cassette artwork. */
+.controls-grid .case{padding-left:16%;column-gap:7px}
+.controls-grid .case-index{position:relative;z-index:1;white-space:nowrap;overflow:visible}
