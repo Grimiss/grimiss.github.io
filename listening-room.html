@@ -4,18 +4,19 @@
 function setDeckPlaying(playing){document.querySelector('.room-hero')?.classList.toggle('deck-playing',playing);}
 function updateDeckCounter(seconds,instant=false){
  const counter=document.querySelector('.deck-counter');if(!counter)return;
- const digits=String(Math.floor(Math.max(0,seconds)/3)%1000).padStart(3,'0');
- if(counter.children.length!==3){counter.replaceChildren();for(let i=0;i<3;i++){const digit=document.createElement('span');digit.className='deck-digit';digit.textContent='0';counter.append(digit);}}
+ const count=Math.max(0,seconds)/3;
+ if(counter.children.length!==3){counter.replaceChildren();for(let i=0;i<3;i++){
+  const digit=document.createElement('span');digit.className='deck-digit';
+  const strip=document.createElement('span');strip.className='deck-digit-strip';strip.style.height='187px';
+  for(let n=0;n<=10;n++){const row=document.createElement('span');row.textContent=String(n%10);strip.append(row);}
+  digit.append(strip);counter.append(digit);
+ }}
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
  Array.from(counter.children).forEach((digit,i)=>{
-  const next=digits[i],previous=digit.dataset.value||'0';if(next===previous&&!instant)return;
-  digit.getAnimations().forEach(animation=>animation.cancel());digit.dataset.value=next;
-  digit.replaceChildren();
-  if(instant||matchMedia('(prefers-reduced-motion: reduce)').matches){digit.textContent=next;return;}
-  const strip=document.createElement('span');strip.className='deck-digit-strip';
-  for(const value of [previous,next]){const row=document.createElement('span');row.textContent=value;strip.append(row);}
-  digit.append(strip);
-  const motion=strip.animate([{transform:'translateY(0)'},{transform:'translateY(-17px)'}],{duration:1100,easing:'cubic-bezier(.25,.1,.25,1)',fill:'forwards'});
-  motion.onfinish=()=>{if(digit.dataset.value===next)digit.textContent=next;};
+  const unit=10**(2-i),whole=Math.floor(count/unit)%10;
+  const carry=Math.max(0,(count%unit)-(unit-1));
+  const offset=whole+(instant||reduced?0:carry);
+  digit.firstElementChild.style.transform='translate3d(0,'+(-17*offset)+'px,0)';
  });
 }
 
@@ -88,7 +89,7 @@ function connectDeckCounter(frame){
     setDeckPlaying(event.target.getPlayerState()===1);
     const seconds=event.target.getCurrentTime();
     if(Number.isFinite(seconds))updateDeckCounter(seconds);
-   },500);
+   },40);
   }}});
  });
 }
