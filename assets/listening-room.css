@@ -221,3 +221,11 @@ footer.shared-footer{border-top:0}
 .player-navigation svg{display:block;width:24px;height:24px}
 .controls-grid .player-navigation .youtube-link{margin:0;min-width:0;min-height:44px;padding:8px;display:flex;align-items:center;justify-content:center}
 @media(min-width:701px){.controls-grid .player-navigation{margin-top:auto}}
+
+/* Phone-only: bring the hi-fi closer to the introduction. */
+@media(max-width:600px){
+ .room-hero{height:calc(290px + 48vw);min-height:0}
+}
+@media(max-width:360px){
+ .room-hero{height:500px}
+}
