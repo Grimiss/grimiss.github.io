@@ -115,5 +115,5 @@ footer.shared-footer{border-top:0}
 .factory-copy:before{content:"";position:absolute;z-index:-1;inset:-28px -32px;background:rgba(5,10,27,.42);filter:blur(25px);border-radius:40px;pointer-events:none}
 @media(max-width:720px){.hero-content:before{inset:120px 2% 40px;background:rgba(5,10,27,.4);filter:blur(23px)}}
 
-/* FRS initials echo the pale blue studio lighting. */
-#hero-title .frs-initial{font-weight:inherit;color:#9bd5f2;-webkit-text-fill-color:#9bd5f2;background:none}
+/* FRS initials match the Sound Factory button border. */
+#hero-title .frs-initial{font-weight:inherit;color:var(--purple);-webkit-text-fill-color:var(--purple);background:none}
