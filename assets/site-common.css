@@ -40,3 +40,8 @@ footer.shared-footer .footer-contact{font-size:9.5px;line-height:1.6;letter-spac
 .site-header .nav a[aria-current="page"]{border-bottom-color:transparent;position:relative}
 .site-header .nav a[aria-current="page"]:after{content:"";position:absolute;left:0;right:0;bottom:9px;height:1px;background:#8ac4dd;pointer-events:none}
 }
+
+/* Phones: center the tape shortcut in the space above the hi-fi. */
+@media(max-width:600px){
+ .room-hero .choose-tape{left:50%;top:42%;bottom:auto;transform:translateX(-50%);white-space:nowrap}
+}
