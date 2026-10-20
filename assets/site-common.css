@@ -34,3 +34,9 @@ footer.shared-footer .footer-brand{width:var(--footer-brand-width);max-width:100
 footer.shared-footer .footer-tagline,footer.shared-footer .footer-contact{width:var(--footer-brand-width);max-width:100%;margin:0 auto;box-sizing:border-box;text-align:center}
 footer.shared-footer .footer-tagline{font-size:12px;line-height:1.6;font-style:italic;letter-spacing:0}
 footer.shared-footer .footer-contact{font-size:9.5px;line-height:1.6;letter-spacing:0;overflow-wrap:anywhere}
+
+/* Keep the mobile active underline close to its label, within the tap area. */
+@media(max-width:800px){
+.site-header .nav a[aria-current="page"]{border-bottom-color:transparent;position:relative}
+.site-header .nav a[aria-current="page"]:after{content:"";position:absolute;left:0;right:0;bottom:9px;height:1px;background:#8ac4dd;pointer-events:none}
+}
